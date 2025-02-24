@@ -29,11 +29,12 @@
   // Get the elements
   let emojiImage = document.getElementById("status-emoji");
   let statusText = document.getElementById("status-text");
+  let smallImages = document.querySelectorAll(".smallimage");
 
   // Set the status text
   statusText.textContent = discordStatusText;
 
-  // Check if the emoji is present
+  // Handle status emoji
   if (discordStatusEmoji) {
     // If there's an emoji, set the image source
     emojiImage.src = `https://cdn.discordapp.com/emojis/${discordStatusEmoji}.png`;
@@ -42,6 +43,17 @@
     // Hide the emoji if there's no emoji
     emojiImage.style.display = "none";
   }
+
+  // Handle small images
+  smallImages.forEach(img => {
+    // If the small image has a valid source, show it
+    if (img.src) {
+      img.style.display = "inline";
+    } else {
+      // Hide the image if the source is missing or broken
+      img.style.display = "none";
+    }
+  });
 </script>
     </body>
 </html>
