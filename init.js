@@ -138,7 +138,7 @@ const draw = data => {
                     smallImageElem.draggable = false;
                     smallImageElem.width = smallImageElem.height = 32;
                     if(isSpotify) {
-                        smallImageElem.src = "https://developer.spotify.com/images/guidelines/design/icon3@2x.png";
+                        smallImageElem.src = "https://yenny.lol/images/spotify.png";
                     } else {
                         const imageid = act.assets.small_image.substring(3);
                         smallImageElem.src = `https://media.discordapp.net/${imageid}`;
