@@ -1,16 +1,9 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 :root {
-    --bg-clr: transparent; /* no background */
-    --fg-clr: rgba(17, 17, 22, 0.7); /* not used here, but kept for reference */
+    --bg-clr: transparent;
     --accent-clr: rgb(78, 46, 121);
     --text-clr: white;
     --hidden-text-clr: rgb(170, 170, 170);
-    --border-radius: 0.45rem;
+    --border-radius: 15px; /* match the radius from yenny.lol */
     --backdrop-url: url("");
     
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -22,26 +15,15 @@ body {
     display: grid;
     align-items: center;
     justify-content: center;
-    background: transparent; /* remove page background */
-}
-
-#avatar {
-    border-radius: 50%;
-}
-
-.display {
-    min-width: 35vw;
-    padding: 1.75em;
-    background: transparent; /* no background for display container */
-    border-radius: var(--border-radius);
+    background: transparent;
 }
 
 /* Profile container with gray transparent blur */
 .userinfo {
-    background: rgba(128, 128, 128, 0.3); /* semi-transparent gray */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* for Safari */
-    border-radius: var(--border-radius);
+    background: rgba(0, 0, 0, 0.3); /* Darker and semi-transparent like yenny.lol */
+    backdrop-filter: blur(15px); /* Stronger blur like yenny.lol */
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: var(--border-radius); /* matching radius */
     padding: 1em;
 
     display: grid;
@@ -56,10 +38,11 @@ body {
 
 #avatar {
     grid-area: avatar;
+    border-radius: 50%;
 }
 
 #username {
-    color: var(--hidden-text-clr);
+    color: var(--hidden-text-clr); /* Light gray for username */
     grid-area: username;
 }
 
@@ -82,7 +65,7 @@ body {
     display: grid;
     grid-template-columns: min-content 1fr;
     grid-template-rows: min-content min-content min-content;
-    gap: 0px 12px;
+    gap: 0 12px;
     align-items: center;
     grid-template-areas: 
         "images name"
