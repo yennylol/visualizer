@@ -21,6 +21,22 @@
             </div>
         </div>
 <script>
+  function sendHeight() {
+    // Calculate the full document height
+    var height = Math.max(
+      document.documentElement.scrollHeight,
+      document.body.scrollHeight
+    );
+    // Send the height to the parent window; replace "https://yenny.lol" with your actual parent domain if needed
+    window.parent.postMessage({ height: height }, "https://yenny.lol");
+  }
+  
+  // Send height once the page loads and on any resize events
+  window.addEventListener("load", sendHeight);
+  window.addEventListener("resize", sendHeight);
+</script>
+
+<script>
   // Example: Set your Discord status emoji and text
   let discordStatusEmoji = ""; // Set to the emoji or leave empty if none
   let discordStatusText = "Online"; // Example status text
