@@ -21,5 +21,27 @@
             <div class="activities">
             </div>
         </div>
+<script>
+  // Example: Set your Discord status emoji and text
+  let discordStatusEmoji = ""; // Set to the emoji or leave empty if none
+  let discordStatusText = "Online"; // Example status text
+
+  // Get the elements
+  let emojiImage = document.getElementById("status-emoji");
+  let statusText = document.getElementById("status-text");
+
+  // Set the status text
+  statusText.textContent = discordStatusText;
+
+  // Check if the emoji is present
+  if (discordStatusEmoji) {
+    // If there's an emoji, set the image source
+    emojiImage.src = `https://cdn.discordapp.com/emojis/${discordStatusEmoji}.png`;
+    emojiImage.style.display = "inline"; // Show the emoji image
+  } else {
+    // Hide the emoji if there's no emoji
+    emojiImage.style.display = "none";
+  }
+</script>
     </body>
 </html>
