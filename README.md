@@ -10,7 +10,7 @@ Please feel free to leave a PR or an issue, to try to keep this project as custo
 
 ![proof of concept](https://github.com/lucaledd/discordstatus-website/assets/58527636/cf72ccab-71d0-4fa3-917c-ddfe57daaac5)
 
-See a preview of it here: https://lucaledd.github.io/discordstatus-website/
+See a preview of it here: https://yennylol.github.io/visualizer/
 
 # Changelog
 16th December 2023:
